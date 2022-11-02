@@ -1,7 +1,7 @@
 <template>
   <div class="default-layout bg-gray-50" dir="rtl">
     <base-sections-home-header />
-    <div class="container mx-auto">
+    <div class=" mx-auto">
       <nuxt-child />
     </div>
     <base-sections-default-footer />
