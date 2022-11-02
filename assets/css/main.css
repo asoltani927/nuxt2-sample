@@ -3,6 +3,14 @@
 
 body {
   font-family: IRANSans;
+  background-color: rgb(249 250 251);
+}
+
+a,
+span,
+div,
+p {
+  font-family: IRANSans;
 }
 
 h1,
