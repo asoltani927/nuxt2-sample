@@ -2,7 +2,7 @@
 
 
 body {
-  font-family: IRANSans;
+  font-family: 'IRANSansFaNum';
   background-color: rgb(249 250 251);
 }
 
@@ -10,7 +10,7 @@ a,
 span,
 div,
 p {
-  font-family: IRANSans;
+  font-family: 'IRANSansFaNum';
 }
 
 h1,
@@ -19,5 +19,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: BIRANSans;
+  font-family: 'IRANSansFaNum';
 }

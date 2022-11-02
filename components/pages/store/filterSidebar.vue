@@ -1,5 +1,7 @@
 <template>
-  <div>filterSideBar</div>
+  <div>
+    <pages-store-filters-sorting />
+  </div>
 </template>
 
 <script>
