@@ -23,6 +23,15 @@ export default {
     },
     getProductsTo () {
       return this.$store.getters['products/to']
+    },
+    productPagination () {
+      return {
+        current_page: this.getProductsPage + 1,
+        last_page: this.getTotalPageProducts,
+        per_page: this.getProductsCount,
+        to: this.getProductsTo,
+        from: this.getProductsFrom
+      }
     }
   },
 

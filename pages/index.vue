@@ -11,6 +11,13 @@
           <u>{{ getProductsTo }}</u> از مجموع <u>{{ getTotalProducts }}</u>
         </div>
         <pages-store-filter-Items />
+
+        <div class="my-4">
+          <base-my-pagination
+            :pagination="productPagination"
+            @change="onChangePagination"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -28,6 +35,12 @@ export default {
 
   async fetch () {
     await this.getProducts()
+  },
+
+  methods: {
+    async onChangePagination (pagination) {
+      await this.getProducts(pagination.page - 1, pagination.count)
+    }
   }
 }
 </script>
