@@ -28,7 +28,7 @@ export default {
       return state.search
     },
     records: (state) => {
-      return state.records
+      return state.records ?? []
     },
     total: (state) => {
       return state.total
