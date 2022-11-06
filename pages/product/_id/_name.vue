@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-center my-10">Under Construction</h1>
+  <h1 class="text-center my-10">
+    Under Construction
+  </h1>
 </template>
 
 <script>
