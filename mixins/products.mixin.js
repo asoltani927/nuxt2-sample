@@ -3,6 +3,9 @@ import { GET_PRODUCTS } from '~/store/products'
 export default {
 
   computed: {
+    getProductsSearch () {
+      return this.$store.getters['products/search']
+    },
     getTotalProducts () {
       return this.$store.getters['products/total']
     },

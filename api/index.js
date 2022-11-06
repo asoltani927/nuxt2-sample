@@ -11,7 +11,11 @@ app.get('/products', function (req, res) {
   if (limit <= 0) {
     return res.send('error')
   }
-  const products = require('../assets/data/products.json')
+  let products = require('../assets/data/products.json')
+
+  if (req.query.search) {
+    products = products.filter(item => item.Title.includes(req.query.search))
+  }
 
   const from = (limit * page) + 1
   const to = (((limit * page)) + limit)
