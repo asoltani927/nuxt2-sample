@@ -15,24 +15,32 @@ export default {
       page: 0,
       count: 15,
       total: 0,
-      total_page: 0
+      total_page: 0,
+      from: 0,
+      to: 0
     }
   },
   getters: {
-    getRecords: (state) => {
+    records: (state) => {
       return state.records
     },
-    getTotal: (state) => {
-      return state.records
+    total: (state) => {
+      return state.total
     },
-    getPage: (state) => {
+    page: (state) => {
       return state.page
     },
-    getTotalPage: (state) => {
+    totalPage: (state) => {
       return state.total_page
     },
-    getCount: (state) => {
+    count: (state) => {
       return state.count
+    },
+    from: (state) => {
+      return state.from
+    },
+    to: (state) => {
+      return state.to
     }
   },
   actions: {
@@ -50,6 +58,8 @@ export default {
       state.count = payload.count
       state.total = payload.total
       state.total_page = payload.total_page
+      state.from = payload.from
+      state.to = payload.to
     }
   }
 }

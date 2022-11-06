@@ -13,14 +13,18 @@ app.get('/products', function (req, res) {
   }
   const products = require('../assets/data/products.json')
 
+  const from = (limit * page) + 1
+  const to = (((limit * page)) + limit)
   const result = {
     data: [],
     total: products.length,
     page,
     count: limit,
+    from,
+    to,
     total_page: Math.round(products.length / limit)
   }
-  for (let i = (limit * page); i <= (((limit * page)) + limit); i++) {
+  for (let i = from; i <= to; i++) {
     result.data.push(products[i])
   }
   // return products

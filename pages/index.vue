@@ -7,8 +7,8 @@
       <div class="lg:col-span-6 h-80">
         <pages-store-filter-toolbar />
         <div class="text-xs mb-4 p-2 text-gray-500 font-iransans">
-          در حال نمایش نتایج <u>1</u> الی <u>12</u> از مجموع <u>621</u> نتیجه
-          یافت شده در 0.037 ثانیه
+          در حال نمایش نتایج <u>{{ getProductsFrom }}</u> الی
+          <u>{{ getProductsTo }}</u> از مجموع <u>{{ getTotalProducts }}</u>
         </div>
         <pages-store-filter-Items />
       </div>
@@ -17,15 +17,17 @@
 </template>
 
 <script>
-import { GET_PRODUCTS } from '~/store/products'
+import productsMixin from '~/mixins/products.mixin'
 
 export default {
   name: 'IndexPage',
 
+  mixins: [productsMixin],
+
   fetchOnServer: false,
 
   async fetch () {
-    await this.$store.dispatch(`products/${GET_PRODUCTS}`)
+    await this.getProducts()
   }
 }
 </script>
