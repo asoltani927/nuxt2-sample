@@ -13,7 +13,7 @@ app.get('/products', function (req, res) {
   }
   let products = require('../assets/data/products.json')
 
-  if (req.query.search) {
+  if (req.query.search && req.query.search.length > 0) {
     products = products.filter(item => item.Title.includes(req.query.search))
   }
 
@@ -33,6 +33,25 @@ app.get('/products', function (req, res) {
   }
   // return products
   res.send(result)
+})
+
+app.get('/login', function (req, res) {
+  if (req.body.username === 'test' && req.body.username === 'test') {
+    return {
+      token: 'asjkbrhiu23y4r2893ywksdjfmsdnnfvb234y689234kjwjefwejmbfjghfskjfhbr3k4jb',
+      refresh_token: 'aslkdhasdhasdkjahdkjashdkajsdjhvbuytg2398y23423'
+    }
+  }
+  return {}
+})
+
+app.get('/user', function (req, res) {
+  return {
+    user: {
+      name: 'amin',
+      photo_uri: 'https://asoltani.ir/wp-content/uploads/2021/02/20180814_191928.png'
+    }
+  }
 })
 
 export default {
