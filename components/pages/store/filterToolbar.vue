@@ -81,7 +81,7 @@
             mt-4
             lg:mt-0
           "
-          @click="doSearch"
+          @click="doSearch($event)"
         >
           <i class="fal fa-search" /> جستجو کنید
         </button>
@@ -109,7 +109,8 @@ export default {
   },
 
   methods: {
-    doSearch () {
+    doSearch (event) {
+      event.preventDefault()
       this.getProducts()
     }
   }

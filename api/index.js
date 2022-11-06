@@ -35,23 +35,21 @@ app.get('/products', function (req, res) {
   res.send(result)
 })
 
-app.get('/login', function (req, res) {
-  if (req.body.username === 'test' && req.body.username === 'test') {
-    return {
+app.post('/login', function (req, res) {
+  if (req.body.username === 'test' && req.body.password === 'test') {
+    return res.send({
       token: 'asjkbrhiu23y4r2893ywksdjfmsdnnfvb234y689234kjwjefwejmbfjghfskjfhbr3k4jb',
       refresh_token: 'aslkdhasdhasdkjahdkjashdkajsdjhvbuytg2398y23423'
-    }
+    })
   }
-  return {}
+  return res.send({})
 })
 
 app.get('/user', function (req, res) {
-  return {
-    user: {
-      name: 'amin',
-      photo_uri: 'https://asoltani.ir/wp-content/uploads/2021/02/20180814_191928.png'
-    }
-  }
+  return res.send({
+    name: 'amin',
+    photo_uri: 'https://asoltani.ir/wp-content/uploads/2021/02/20180814_191928.png'
+  })
 })
 
 export default {
