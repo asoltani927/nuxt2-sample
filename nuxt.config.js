@@ -48,12 +48,27 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/'
+    baseURL: process.env.API_URI || '/api'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
 
-  serverMiddleware: ['~/api/index.js']
+  serverMiddleware: ['~/api/index.js'],
+
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    meta: {
+      /* meta options */
+      favicon: false
+    },
+    icon: {
+      /* meta options */
+      source: '/favicon.png'
+    },
+    manifest: {
+      lang: 'en'
+    }
+  }
 }

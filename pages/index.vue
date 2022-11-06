@@ -17,7 +17,15 @@
 </template>
 
 <script>
+import { GET_PRODUCTS } from '~/store/products'
+
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+
+  fetchOnServer: false,
+
+  async fetch () {
+    await this.$store.dispatch(`products/${GET_PRODUCTS}`)
+  }
 }
 </script>
