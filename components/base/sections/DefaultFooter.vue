@@ -10,7 +10,7 @@
   >
     <div class="md:flex md:justify-between pt-8 px-4">
       <div class="mb-6 md:mb-0">
-        <a href="https://flowbite.com/" class="flex items-center">
+        <nuxt-link to="/" class="flex items-center">
           <img
             src="~/assets/logo.png"
             class="fill-current h-9 w-15 ml-2"
@@ -18,7 +18,7 @@
           >
 
           <span class="text-xl font-BIRANSans text-sky-900"> نام فروشگاه </span>
-        </a>
+        </nuxt-link>
         <p class="text-sm text-gray-600 mt-2">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
           از طراحان گرافیک است

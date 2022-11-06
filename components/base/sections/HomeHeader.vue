@@ -2,13 +2,15 @@
   <div class="home-header border-sky-900 border-t-8">
     <nav class="flex items-center justify-between flex-wrap px-4 py-6">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
-        <img
-          src="~/assets/logo.png"
-          class="fill-current h-10 w-15 ml-2"
-          alt=""
-        >
+        <nuxt-link to="/" class="flex items-center">
+          <img
+            src="~/assets/logo.png"
+            class="fill-current h-10 w-15 ml-2"
+            alt=""
+          >
 
-        <span class="text-xl font-BIRANSans text-sky-900"> نام فروشگاه </span>
+          <span class="text-xl font-BIRANSans text-sky-900"> نام فروشگاه </span>
+        </nuxt-link>
       </div>
       <div class="block lg:hidden">
         <button

@@ -4,7 +4,7 @@
       <div class="lg:col-span-2">
         <pages-store-filter-sidebar />
       </div>
-      <div class="lg:col-span-6 h-80">
+      <div class="lg:col-span-6">
         <pages-store-filter-toolbar />
         <div class="text-xs mb-4 p-2 text-gray-500 font-iransans">
           در حال نمایش نتایج <u>{{ getProductsFrom }}</u> الی
